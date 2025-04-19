@@ -94,7 +94,7 @@
     <ul>
       <li>Selected in top 5% applicants for Cloud Bootcamp by CloudNative India.</li>
       <li>Deployed a Kubernetes-powered microservice demo project on Azure during a Cloud Hackathon.</li>
-      <li>Speaker at college-level DevOps webinar: “From GitHub to Production: The Power of CI/CD”.</li>
+      <li>Speaker at college-level DevOps webinar: "From GitHub to Production: The Power of CI/CD".</li>
     </ul>
 
     <p><strong>Visitor Count:</strong> <span id="counter">Loading...</span></p>
@@ -107,7 +107,7 @@
   <!-- Firebase Visitor Counter Script -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-    import { getDatabase, ref, runTransaction, onValue } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+    import { getDatabase, ref, runTransaction, onValue, get, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 
     const firebaseConfig = {
       apiKey: "AIzaSyDR2Zafa-HdIMUrBt1F79u5dXTCxVVNwA",
@@ -123,13 +123,34 @@
     const db = getDatabase(app);
     const counterRef = ref(db, 'visitorCount');
 
-    runTransaction(counterRef, (count) => {
-      return (count || 0) + 1;
+    // First check the current data structure
+    get(counterRef).then((snapshot) => {
+      const currentValue = snapshot.val();
+      
+      // If it's not a number, reset it to a number
+      if (typeof currentValue !== 'number') {
+        set(counterRef, 0).then(() => {
+          // After resetting, increment the counter
+          runTransaction(counterRef, (current) => {
+            return (current || 0) + 1;
+          });
+        });
+      } else {
+        // If it's already a number, just increment
+        runTransaction(counterRef, (current) => {
+          return (current || 0) + 1;
+        });
+      }
     });
 
+    // Display the updated count
     onValue(counterRef, (snapshot) => {
       const count = snapshot.val();
-      document.getElementById('counter').innerText = count;
+      if (typeof count === 'number') {
+        document.getElementById('counter').innerText = count;
+      } else {
+        document.getElementById('counter').innerText = '0';
+      }
     });
   </script>
 </body>
