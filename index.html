@@ -104,11 +104,11 @@
     </div>
   </div>
 
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
-  <script>
-    // Firebase configuration
+  <!-- Firebase Visitor Counter Script -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getDatabase, ref, runTransaction, onValue } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+
     const firebaseConfig = {
       apiKey: "AIzaSyDR2Zafa-HdIMUrBt1F79u5dXTCxVVNwA",
       authDomain: "cloud-resume-sambhav.firebaseapp.com",
@@ -119,19 +119,17 @@
       appId: "1:206738155807:web:b49627d8d68547352cd76e"
     };
 
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-    const counterRef = db.ref('visitorCount');
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const counterRef = ref(db, 'visitorCount');
 
-    // Increment the count
-    counterRef.transaction((count) => {
+    runTransaction(counterRef, (count) => {
       return (count || 0) + 1;
     });
 
-    // Display the count
-    counterRef.on('value', (snapshot) => {
-      document.getElementById('counter').innerText = snapshot.val();
+    onValue(counterRef, (snapshot) => {
+      const count = snapshot.val();
+      document.getElementById('counter').innerText = count;
     });
   </script>
 </body>
