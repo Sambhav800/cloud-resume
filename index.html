@@ -54,10 +54,8 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-H8V2BZD6H5');
   </script>
-
 </head>
 <body>
   <div class="container">
@@ -106,12 +104,35 @@
     </div>
   </div>
 
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
   <script>
-    fetch('https://api.countapi.xyz/hit/sambhav-pal-resume/visits')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('counter').innerText = data.value;
-      });
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDR2Zafa-HdIMUrBt1F79u5dXTCxVVNwA",
+      authDomain: "cloud-resume-sambhav.firebaseapp.com",
+      databaseURL: "https://cloud-resume-sambhav-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "cloud-resume-sambhav",
+      storageBucket: "cloud-resume-sambhav.appspot.com",
+      messagingSenderId: "206738155807",
+      appId: "1:206738155807:web:b49627d8d68547352cd76e"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+    const counterRef = db.ref('visitorCount');
+
+    // Increment the count
+    counterRef.transaction((count) => {
+      return (count || 0) + 1;
+    });
+
+    // Display the count
+    counterRef.on('value', (snapshot) => {
+      document.getElementById('counter').innerText = snapshot.val();
+    });
   </script>
 </body>
 </html>
