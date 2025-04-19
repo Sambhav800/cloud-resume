@@ -86,6 +86,15 @@
       <li>Speaker at a college-level DevOps webinar: “From GitHub to Production: The Power of CI/CD”.</li>
     </ul>
   </div>
+  <p>Visitor Count: <span id="counter"></span></p>
 
+  <script>
+    fetch('https://api.countapi.xyz/hit/sambhav-pal-resume/visits')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('counter').innerText = data.value;
+      });
+  </script>
+  
 </body>
 </html>
