@@ -6,17 +6,29 @@
   <title>Sambhav Pal | Cloud & DevOps Enthusiast</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f4f6f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+    h1 {
       color: #2c3e50;
-      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 10px;
     }
-    h1, h2 {
-      color: #1a1a1a;
-    }
-    .section {
-      margin-bottom: 25px;
+    h2 {
+      border-bottom: 2px solid #0077cc;
+      padding-bottom: 4px;
+      color: #0077cc;
     }
     ul {
       padding-left: 20px;
@@ -28,65 +40,71 @@
     a:hover {
       text-decoration: underline;
     }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+    }
   </style>
+
+  <!-- Google Analytics 4 (GA4) Script -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8V2BZD6H5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8V2BZD6H5');
+  </script>
+
 </head>
 <body>
+  <div class="container">
+    <h1>Sambhav Pal</h1>
+    <p>Email: sambhavpal5@gmail.com | Phone: 7986820116</p>
+    <p>GitHub: <a href="https://github.com/Sambhav800" target="_blank">github.com/Sambhav800</a> | 
+       LinkedIn: <a href="https://www.linkedin.com/in/sambhav-pal050405/" target="_blank">linkedin.com/in/sambhav-pal050405</a></p>
 
-  <h1>Sambhav Pal</h1>
-  <p>Email: sambhavpal5@gmail.com | Phone: 7986820116</p>
-  <p>GitHub: <a href="https://github.com/Sambhav800" target="_blank">github.com/Sambhav800</a> | 
-     LinkedIn: <a href="https://www.linkedin.com/in/sambhav-pal050405/" target="_blank">linkedin.com/in/sambhav-pal050405</a></p>
-
-  <div class="section">
     <h2>Objective</h2>
     <p>Aspiring Cloud Engineer and AI Automation enthusiast, passionate about building scalable solutions using cloud platforms, DevOps, and automation tools. Actively contributing to open-source and preparing for the LFX Mentorship program.</p>
-  </div>
 
-  <div class="section">
     <h2>Education</h2>
-    <p><strong>Dr. B R Ambedkar National Institute of Technology, Jalandhar</strong><br>
-    Bachelor of Technology in Computer Science and Engineering<br>
-    Expected Graduation: 2026</p>
-  </div>
+    <p><strong>Dr. B R Ambedkar National Institute of Technology, Jalandhar</strong><br>Bachelor of Technology in Computer Science and Engineering<br>Expected Graduation: 2026</p>
 
-  <div class="section">
     <h2>Skills</h2>
     <ul>
       <li>Cloud Platforms: Microsoft Azure (AZ-104, AZ-900 Certified)</li>
       <li>Programming Languages: Python, C++, JavaScript</li>
       <li>DevOps & Tools: Docker, Kubernetes, Terraform, Git, GitHub Actions</li>
       <li>Other Tools: Linux, Postman, Bash, CI/CD pipelines, REST APIs</li>
-      <li>CS Fundamentals: Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP)</li>
+      <li>CS Fundamentals: Data Structures & Algorithms (DSA), OOP</li>
     </ul>
-  </div>
 
-  <div class="section">
     <h2>Certifications</h2>
     <ul>
       <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
       <li>Microsoft Certified: Azure Administrator Associate (AZ-104)</li>
     </ul>
-  </div>
 
-  <div class="section">
     <h2>Projects</h2>
     <ul>
-      <li><strong>Cloud Resume Challenge</strong>:  
-      Developed a resume hosted on GitHub Pages using HTML/CSS, integrated with GitHub Actions for CI/CD deployment. Cloud infrastructure is under construction using Terraform for future scalability.</li>
-      <li><strong>AI Automation Platform</strong>:  
-      Built an automation solution for job seekers using ChatGPT and Zapier to auto-generate cover letters and track job applications via Google Sheets and Gmail integration.</li>
+      <li><strong>Cloud Resume Challenge:</strong> Developed a resume hosted on GitHub Pages using HTML/CSS, integrated with GitHub Actions for CI/CD deployment. Cloud infrastructure is under construction using Terraform for future scalability.</li>
     </ul>
-  </div>
 
-  <div class="section">
     <h2>Achievements</h2>
     <ul>
-      <li>Selected in top 5% applicants for a national-level Cloud Bootcamp by CloudNative India.</li>
-      <li>Built and deployed a Kubernetes-powered microservice demo project on Azure during a Cloud Hackathon.</li>
-      <li>Speaker at a college-level DevOps webinar: “From GitHub to Production: The Power of CI/CD”.</li>
+      <li>Selected in top 5% applicants for Cloud Bootcamp by CloudNative India.</li>
+      <li>Deployed a Kubernetes-powered microservice demo project on Azure during a Cloud Hackathon.</li>
+      <li>Speaker at college-level DevOps webinar: “From GitHub to Production: The Power of CI/CD”.</li>
     </ul>
+
+    <p><strong>Visitor Count:</strong> <span id="counter">Loading...</span></p>
+
+    <div class="footer">
+      © Sambhav Pal | Cloud & DevOps Enthusiast
+    </div>
   </div>
-  <p>Visitor Count: <span id="counter"></span></p>
 
   <script>
     fetch('https://api.countapi.xyz/hit/sambhav-pal-resume/visits')
@@ -95,6 +113,5 @@
         document.getElementById('counter').innerText = data.value;
       });
   </script>
-  
 </body>
 </html>
