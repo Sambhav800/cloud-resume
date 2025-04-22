@@ -20,7 +20,7 @@
       --achievement-bg: #eff6ff;
       --achievement-border: #bfdbfe;
     }
-    
+
     [data-theme="dark"] {
       --background: #0f172a;
       --text: #e2e8f0;
@@ -34,7 +34,7 @@
       --achievement-bg: #172554;
       --achievement-border: #1e40af;
     }
-    
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -43,7 +43,7 @@
       transition: all 0.3s ease;
       line-height: 1.6;
     }
-    
+
     .container {
       max-width: 850px;
       margin: auto;
@@ -54,20 +54,20 @@
       margin-top: 40px;
       margin-bottom: 40px;
     }
-    
+
     header {
       text-align: center;
       margin-bottom: 25px;
       padding-bottom: 20px;
       border-bottom: 1px solid var(--border);
     }
-    
+
     h1 {
       color: var(--heading);
       margin-bottom: 10px;
       font-size: 32px;
     }
-    
+
     .contact-info {
       display: flex;
       justify-content: center;
@@ -75,46 +75,46 @@
       gap: 15px;
       margin: 15px 0;
     }
-    
+
     .contact-item {
       display: flex;
       align-items: center;
       gap: 5px;
     }
-    
+
     h2 {
       color: var(--heading);
       padding-bottom: 8px;
       margin-top: 25px;
       border-bottom: 2px solid var(--accent);
     }
-    
+
     .section {
       margin-bottom: 25px;
       padding: 15px;
       background-color: var(--section-bg);
       border-radius: 8px;
     }
-    
+
     ul {
       padding-left: 20px;
       margin: 12px 0;
     }
-    
+
     li {
       margin-bottom: 8px;
     }
-    
+
     a {
       color: var(--accent);
       text-decoration: none;
       font-weight: 500;
     }
-    
+
     a:hover {
       text-decoration: underline;
     }
-    
+
     .footer {
       text-align: center;
       margin-top: 30px;
@@ -123,7 +123,7 @@
       color: var(--footer);
       border-top: 1px solid var(--border);
     }
-    
+
     .theme-toggle {
       position: fixed;
       top: 20px;
@@ -142,46 +142,46 @@
       justify-content: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
-    
+
     .theme-toggle:hover {
       transform: scale(1.1);
       background-color: var(--heading);
     }
-    
+
     .skill-item {
       margin-bottom: 12px;
     }
-    
+
     .skill-name {
       display: flex;
       justify-content: space-between;
       margin-bottom: 5px;
     }
-    
+
     .skill-level {
       font-size: 13px;
       color: var(--accent);
     }
-    
+
     .skill-bar {
       height: 8px;
       background-color: var(--border);
       border-radius: 4px;
       overflow: hidden;
     }
-    
+
     .skill-progress {
       height: 100%;
       background-color: var(--accent);
       transition: width 1.2s ease-out;
     }
-    
+
     .stats-container {
       display: flex;
       justify-content: center;
       margin: 30px 0;
     }
-    
+
     .stat-box {
       background-color: var(--heading);
       color: white;
@@ -190,25 +190,25 @@
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    
+
     .stat-number {
       font-size: 28px;
       font-weight: bold;
     }
-    
+
     .stat-label {
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-top: 5px;
     }
-    
+
     .certification-item {
       display: flex;
       align-items: center;
       margin-bottom: 10px;
     }
-    
+
     .cert-badge {
       width: 40px;
       height: 40px;
@@ -223,7 +223,7 @@
       font-weight: bold;
       font-size: 18px;
     }
-    
+
     .last-updated {
       text-align: center;
       font-size: 12px;
@@ -241,7 +241,7 @@
       font-weight: bold;
       color: var(--heading);
     }
-    
+
     .achievement-item {
       margin-bottom: 15px;
       padding: 15px;
@@ -250,18 +250,18 @@
       border-left: 4px solid var(--accent);
       position: relative;
     }
-    
+
     .achievement-title {
       font-weight: bold;
       color: var(--heading);
       margin-bottom: 5px;
       font-size: 15px;
     }
-    
+
     .achievement-description {
       margin-bottom: 0;
     }
-    
+
     .achievement-data {
       display: flex;
       align-items: center;
@@ -269,21 +269,21 @@
       font-size: 13px;
       color: var(--footer);
     }
-    
+
     .achievement-date {
       margin-right: 15px;
     }
-    
+
     @media print {
       .theme-toggle {
         display: none;
       }
-      
+
       body {
         background: white;
         color: black;
       }
-      
+
       .container {
         box-shadow: none;
         margin: 0;
@@ -292,7 +292,6 @@
     }
   </style>
 
-  <!-- Google Analytics 4 (GA4) Script -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8V2BZD6H5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -303,12 +302,12 @@
 </head>
 <body>
   <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌓</button>
-  
+
   <div class="container">
     <header>
       <h1>Sambhav Pal</h1>
       <p>Cloud Engineer & DevOps Professional</p>
-      
+
       <div class="contact-info">
         <span class="contact-item">📧 sambhavpal5@gmail.com</span>
         <span class="contact-item">📱 7986820116</span>
@@ -336,7 +335,7 @@
           </div>
           <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
         </div>
-        
+
         <div class="skill-item">
           <div class="skill-name">
             <span>DevOps & CI/CD (GitHub Actions, Jenkins)</span>
@@ -344,7 +343,7 @@
           </div>
           <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
         </div>
-        
+
         <div class="skill-item">
           <div class="skill-name">
             <span>Infrastructure as Code (Terraform, ARM)</span>
@@ -352,7 +351,7 @@
           </div>
           <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
         </div>
-        
+
         <div class="skill-item">
           <div class="skill-name">
             <span>Containerization (Docker, Kubernetes)</span>
@@ -360,7 +359,7 @@
           </div>
           <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
         </div>
-        
+
         <div class="skill-item">
           <div class="skill-name">
             <span>Programming (Python, JavaScript, Bash)</span>
@@ -381,7 +380,7 @@
             <small>Validates expertise in implementing, monitoring, and maintaining Azure resources</small>
           </div>
         </div>
-        
+
         <div class="certification-item">
           <div class="cert-badge">AZ</div>
           <div>
@@ -409,11 +408,12 @@
           <p>Developed a cloud-native resume platform with multiple professional components:</p>
           <ul>
             <li>Implemented complete CI/CD pipeline using GitHub Actions for automated testing and deployment</li>
-            <li>Integrated Firebase Realtime Database for dynamic visitor tracking with transaction-based concurrency handling</li>
-            <li>Built responsive, accessible frontend with dark/light mode support</li>
+            <li>Built a serverless API using Firebase Cloud Functions for visitor tracking</li>
+            <li>Integrated Firebase Realtime Database for dynamic visitor counting with transaction-based concurrency handling</li>
+            <li>Created responsive, accessible frontend with dark/light mode support</li>
             <li>Currently implementing Infrastructure as Code with Terraform to manage cloud resources</li>
           </ul>
-          <p><small>Technologies: HTML/CSS, JavaScript, Firebase, GitHub Actions, CI/CD, Terraform</small></p>
+          <p><small>Technologies: HTML/CSS, JavaScript, Firebase Cloud Functions, Firebase Realtime Database, GitHub Actions, CI/CD, Terraform</small></p>
         </div>
       </div>
     </section>
@@ -429,7 +429,7 @@
             <span class="achievement-org">Microsoft Learn</span>
           </div>
         </div>
-        
+
         <div class="achievement-item">
           <div class="achievement-title">Multi-Container Application Deployment</div>
           <p class="achievement-description">Successfully implemented a microservices architecture using AKS (Azure Kubernetes Service) during a 48-hour hackathon. The solution included containerized components with CI/CD pipelines, achieving 99.9% uptime during load testing.</p>
@@ -438,7 +438,7 @@
             <span class="achievement-org">Cloud Engineering Hackathon</span>
           </div>
         </div>
-        
+
         <div class="achievement-item">
           <div class="achievement-title">DevOps Webinar Session Lead</div>
           <p class="achievement-description">Conducted a hands-on technical session on "Implementing CI/CD Pipelines with GitHub Actions" for 80+ computer science students. Demonstrated practical workflows and best practices for automated testing and deployment.</p>
@@ -447,7 +447,7 @@
             <span class="achievement-org">Campus Tech Community</span>
           </div>
         </div>
-        
+
         <div class="achievement-item">
           <div class="achievement-title">Cloud Cost Optimization Project</div>
           <p class="achievement-description">Developed and implemented resource tagging strategy and automated shutdown schedules for non-production resources, resulting in estimated 30% reduction in cloud infrastructure costs for a student project environment.</p>
@@ -474,30 +474,29 @@
     </div>
   </div>
 
-  <!-- Theme Toggle Script -->
   <script>
     const themeToggle = document.getElementById('themeToggle');
     const htmlElement = document.documentElement;
-    
+
     // Check for saved theme preference or default to 'light'
     const savedTheme = localStorage.getItem('theme') || 'light';
     htmlElement.setAttribute('data-theme', savedTheme);
-    
+
     themeToggle.addEventListener('click', () => {
       const currentTheme = htmlElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      
+
       htmlElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
     });
-    
+
     // Set the last updated date
     document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
     });
-    
+
     // Animate skill bars on page load
     document.addEventListener('DOMContentLoaded', () => {
       const skillBars = document.querySelectorAll('.skill-progress');
@@ -511,53 +510,51 @@
     });
   </script>
 
-  <!-- Firebase Visitor Counter Script -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-    import { getDatabase, ref, runTransaction, onValue, get, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyDR2Zafa-HdIMUrBt1F79u5dXTCxVVNwA",
-      authDomain: "cloud-resume-sambhav.firebaseapp.com",
-      databaseURL: "https://cloud-resume-sambhav-default-rtdb.asia-southeast1.firebasedatabase.app",
-      projectId: "cloud-resume-sambhav",
-      storageBucket: "cloud-resume-sambhav.appspot.com",
-      messagingSenderId: "206738155807",
-      appId: "1:206738155807:web:b49627d8d68547352cd76e"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
-    const counterRef = ref(db, 'visitorCount');
-
-    // First check the current data structure
-    get(counterRef).then((snapshot) => {
-      const currentValue = snapshot.val();
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const counterElement = document.getElementById('counter');
       
-      // If it's not a number, reset it to a number
-      if (typeof currentValue !== 'number') {
-        set(counterRef, 0).then(() => {
-          // After resetting, increment the counter
-          runTransaction(counterRef, (current) => {
-            return (current || 0) + 1;
+      const getCountUrl = 'https://us-central1-cloud-resume-sambhav.cloudfunctions.net/getVisitorCount';
+      const incrementCountUrl = 'https://us-central1-cloud-resume-sambhav.cloudfunctions.net/incrementVisitorCount';
+      
+      // Function to get the visitor count
+      async function getVisitorCount() {
+        try {
+          const response = await fetch(getCountUrl);
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          const data = await response.json();
+          counterElement.innerText = data.count ? data.count.toLocaleString() : '0';
+        } catch (error) {
+          console.error('Error fetching visitor count:', error);
+          counterElement.innerText = 'Error';
+        }
+      }
+      
+      // Function to increment visitor count
+      async function incrementVisitorCount() {
+        try {
+          const response = await fetch(incrementCountUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            }
           });
-        });
-      } else {
-        // If it's already a number, just increment
-        runTransaction(counterRef, (current) => {
-          return (current || 0) + 1;
-        });
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          const data = await response.json();
+          counterElement.innerText = data.count ? data.count.toLocaleString() : '0';
+        } catch (error) {
+          console.error('Error incrementing visitor count:', error);
+          // Still try to get the count even if increment fails
+          getVisitorCount();
+        }
       }
-    });
-
-    // Display the updated count
-    onValue(counterRef, (snapshot) => {
-      const count = snapshot.val();
-      if (typeof count === 'number') {
-        document.getElementById('counter').innerText = count.toLocaleString();
-      } else {
-        document.getElementById('counter').innerText = '0';
-      }
+      
+      // Increment count on page load
+      incrementVisitorCount();
     });
   </script>
 </body>
